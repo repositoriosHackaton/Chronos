@@ -37,35 +37,52 @@ Desarrollada con customtkinter, permite cargar imágenes mediante arrastrar y so
 * Proceso de desarrollo:
 
 -Fuente del dataset: 
--Limpieza de datos (img que lo valide)
+
+El dataset es originario de Kaggle:
+https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images
+
+-Limpieza de datos:
+
+No hubo una limpieza exhaustiva de los datos, puesto que se necesitaban las imagenes tal cual venían para una mejor predicción.
+Se cargaron las imagenes en lotes y posteriormente se normalizaron.
+
+![image](https://github.com/user-attachments/assets/68bd2dbd-6b21-4b13-a9ad-09eccc3b4653)
+
+
 -Manejo excepciones/control errores
+
+Al haber utilizado un notebook de jupyter nos ayudo bastante en los manejos de errores durante la fase de entreno.
+
 -¿Qué modelo de Machine Learning están usando?
+
+InceptionV3: Se utiliza la arquitectura InceptionV3 preentrenada en el conjunto de datos ImageNet. Las capas del modelo preentrenado se congelan para mantener los pesos ya aprendidos y así aprovechar su capacidad de extracción de características.
+
+Capas Adicionales:
+
+GlobalAveragePooling2D: Se añade una capa de pooling global para reducir las dimensiones espaciales de las características extraídas.
+Dense: Una capa densa con 1024 unidades y activación ReLU para aprender patrones específicos de la tarea de clasificación de melanomas.
+Dropout: Una capa de dropout con una tasa del 10% para evitar el sobreajuste.
+Dense Final: Una capa densa con una única unidad y activación sigmoide para la clasificación binaria (melanoma maligno o benigno).
+
 -Estadísticos (Valores, gráficos, …)
--Métrica(s) de evaluación del modelo
+
+![image](https://github.com/user-attachments/assets/1fbf64ef-11d3-4a24-856f-125529c4c5d8)
 
 * Funcionalidades extra:
 
-Ejem 1: Implementación de chatbot
-- Tecnología/Herramientas usadas (Librería, Framework, …)
-- Arquitectura (img)
-- Indicar fuente del dataset
-- Limpieza de datos (ejem: se usó PLN + img que lo validen)
-- Manejo excepciones/control errores
-- En caso de usar un modelo de ML indicar ¿Qué modelo de Machine Learning están usando?
-- Estadísticos (Valores, gráficos, …)
-- Métrica(s) de evaluación del modelo
+Desarrollo de interfaz gráfica de usuario
+- Se utilizó como base la librería de customtkinter, la cual nos ofrece más libertar de personalización que la librería tkinter.
+- Adicional, se integró tkinterdnd2 para un widget de Drag and Drop
 
-Ejem 2: Integración del proyecto en una pág web
-- Tecnología/Herramientas usadas …
-- Arquitectura (img)
 
-Ejem 3: Integración del proyecto en un canal WhatsApp, Discord, Telegram, Correo, …
-- Tecnología/Herramientas usadas …
-- Arquitectura (img)
-
-Ejem 4: Desarrollo de interfaz gráfica de usuario
-- Tecnología/Herramientas usadas …
-- Arquitectura (img)
-
-Ejem …: …
-- Tecnología/Herramientas usadas …
+Estos fueron las tecnologías y dependecias utilizadas:
+Entorno de Desarrollo y Requisitos
+- Entorno de desarrollo: Jupyter Notebook
+- Versión de Python: 3.12.3
+- IDE: Visual Studio Code
+Dependencias
+- tensorflow
+- requests
+- matplotlib
+- customtkinter
+- tkinterdnd2
