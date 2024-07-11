@@ -9,9 +9,9 @@ SkinDetect es un programa el cual sirve para predecir un melanoma benigno o mali
 1. Nombre del proyecto.
 2. Descripción
 3. Arquitectura del proyecto 
-4. Proceso de desarrollo:
-5. [Funcionalidades]
-6. [Agradecimientos]
+4. Proceso de desarrollo
+5. Funcionalidades extra
+6. Agradecimientos
 
 * Nombre del proyecto:
 
@@ -89,3 +89,7 @@ SkinDetect es un programa el cual sirve para predecir un melanoma benigno o mali
         - matplotlib
         - customtkinter
         - tkinterdnd2
+       
+* Agradecimiento
+
+    Quiero dejar por escrito  mi agradecimiento a todo el equipo de samsung y fundesteam, por tan maravillos curso. A mis profesores Christian y Arthuro por la dedicación y el compromiso de conectarse a cada llamada, a explicar cada tema y preocuparse genuinamente por las dudas de los estudiantes. A la señorita Meydibeth por su paciencia, e insistencia a la hora de realizar las entregas y por haberse mantenido al tanto de cada estudiante en la medida de lo posible. Sin más que decir muchas gracias a todos por tan maravilloso curso.
