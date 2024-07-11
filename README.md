@@ -80,6 +80,7 @@ Entorno de Desarrollo y Requisitos
 - Entorno de desarrollo: Jupyter Notebook
 - Versión de Python: 3.12.3
 - IDE: Visual Studio Code
+
 Dependencias
 - tensorflow
 - requests
