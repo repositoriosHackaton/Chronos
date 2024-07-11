@@ -1,15 +1,8 @@
-# Chronos
-En este espacio se sube el código creado para el grupo
+# Chronos 
 
-Se debe agregar toda la documentación que ustedes consideren pertinente para la compresión de los modelos usados, la ejecución del código y los resultados obtenidos. 
-Puden, si desean, agregar imágenes o resultados obtenidos. 
+# SkinDetect
 
-Recuerden que este readme es su puerta de entrada para su proyecto. 
-
-Un ejemplo puede ser: 
-# Nombre del Proyecto
-
-Breve descripción del proyecto.
+SkinDetect es un programa el cual sirve para predecir un melanoma benigno o maligno según una imagen. Utiliza una estructura de red neuronal.
 
 ## Tabla de contenidos
 
@@ -22,15 +15,28 @@ Breve descripción del proyecto.
 7. [Agradecimientos](#Agradecimientos)
 
 
-* Nombre del proyecto
+* Nombre del proyecto:
 
-* Breve descripción del proyecto -> Alguna imagen o gif que muestre el proyecto
+SkinDetect
 
-* Arquitectura del proyecto + imagen
+* Descripción:
+  
+SkinDetect es un sistema de inteligencia artificial diseñado para la categorización y predicción de melanomas malignos y benignos a partir de imágenes de la piel. Utilizando la arquitectura InceptionV3 preentrenada, SkinDetect aplica técnicas de transferencia de conocimiento para ofrecer una herramienta precisa y eficiente en el diagnóstico de cáncer de piel.
+
+El modelo se entrena y valida con un conjunto de datos de más de 10,000 imágenes, proporcionando un análisis detallado y resultados confiables. La interfaz de usuario permite cargar imágenes fácilmente y obtener predicciones rápidas, facilitando su uso tanto para profesionales médicos como para investigadores en el campo de la dermatología.
+![image](https://github.com/user-attachments/assets/ec606ef7-1391-4dcc-973f-382058bade1f)
+
+* Arquitectura del proyecto 
+
+Modelo Preentrenado: InceptionV3 con capas congeladas.
+Capas Adicionales: GlobalAveragePooling2D, Dense (1024 unidades, ReLU), Dropout (0.1), y una capa de salida sigmoide.
+Entrenamiento: 9595 imágenes de entrenamiento y 1000 de validación. Compilación con Adam y pérdida binaria. Entrenado durante 15 épocas.
+Interfaz de Usuario
+Desarrollada con customtkinter, permite cargar imágenes mediante arrastrar y soltar y obtener predicciones instantáneas sobre la malignidad de los melanomas. La interfaz es intuitiva y facilita la interpretación de resultados.
 
 * Proceso de desarrollo:
 
--Fuente del dataset
+-Fuente del dataset: 
 -Limpieza de datos (img que lo valide)
 -Manejo excepciones/control errores
 -¿Qué modelo de Machine Learning están usando?
